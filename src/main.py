@@ -1,22 +1,21 @@
 import flet as ft
 
 
-global sentence, start_time, input_field, page_global, my_timer, high_score_disp
-my_timer = None
+global sentence, start_time, input_field, page_global
 sentence = "The quick brown fox jumped over the lazy dog"
 start_time = None
 input_field = None
 page_global = None
 result_text = ft.Text("", size=20)
-high_score_disp = ft.Text("", size=20, data=float("inf"))
+
 
 def show_play_again():
-    global sentence, start_time, input_field, page_global, my_timer, high_score_disp
+    global sentence, start_time, input_field, page_global
     
 
 
 def check_answer(event):
-    global sentence, start_time, input_field, page_global, my_timer, high_score_disp
+    global sentence, start_time, input_field, page_global
     print("checking the answer")
 
     # 6. Implement this function
@@ -30,7 +29,7 @@ def check_answer(event):
 
 
 def start_game(event):
-    global sentence, start_time, input_field, page_global, my_timer, high_score_disp
+    global sentence, start_time, input_field, page_global
     # 1. Link the button and the function to start the game
     page_global.controls.clear()
     page_global.update()
@@ -45,7 +44,7 @@ def start_game(event):
 
 
 def main(page: ft.Page):
-    global sentence, start_time, input_field, page_global, my_timer, high_score_disp
+    global sentence, start_time, input_field, page_global
     # DO NOT EDIT THESE LINES
     page_global = page
     page.title = "Typing Speed Test"
